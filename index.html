@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benjamin Mosweta | Web Developer</title>
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Inter Font -->
+    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
         body {
@@ -20,204 +20,126 @@
             background-color: #f8fafc;
             color: #334155;
         }
-
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #cbd5e1;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #64748b;
-            border-radius: 10px;
-        }
-
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInRight {
-            from { opacity: 0; transform: translateX(20px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-
-        .animate-fade-in-down { animation: fadeInDown 0.8s ease-out forwards; }
-        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
-        .animate-fade-in-right { animation: fadeInRight 0.8s ease-out forwards; }
     </style>
 </head>
 
-<body class="antialiased">
+<body>
 
 <!-- HEADER -->
-<header class="bg-white shadow-md py-4 sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center px-6">
-        <div class="text-2xl font-bold text-indigo-700">Benjamin Mosweta</div>
-
+<header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-indigo-700">Benjamin Mosweta</h1>
         <nav class="hidden md:flex space-x-6">
-            <a href="#home" class="hover:text-indigo-700">Home</a>
-            <a href="#about" class="hover:text-indigo-700">About</a>
-            <a href="#skills" class="hover:text-indigo-700">Skills</a>
-            <a href="#projects" class="hover:text-indigo-700">Projects</a>
-            <a href="#contact" class="hover:text-indigo-700">Contact</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </div>
 </header>
 
-<main class="container mx-auto px-6 py-10">
+<main class="max-w-7xl mx-auto px-6 py-10">
 
 <!-- HERO -->
-<section id="home" class="min-h-[80vh] flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg p-10 mb-14">
+<section id="home" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg p-10 mb-14 flex flex-col md:flex-row items-center">
     <div class="md:w-1/2">
-        <h1 class="text-5xl font-bold mb-4 animate-fade-in-down">
-            Hi, I’m <span class="text-yellow-300">Benjamin Mosweta</span>
-        </h1>
-        <p class="text-xl mb-6 animate-fade-in-up">
-            I’m a web developer with hands-on experience building practical websites and applications using PHP, MySQL, and modern frontend tools.
+        <h2 class="text-5xl font-bold mb-4">Hi, I’m Benjamin</h2>
+        <p class="text-xl mb-6">
+            A web developer experienced in building practical management systems using PHP, MySQL, and JavaScript.
         </p>
-        <a href="#contact" class="bg-white text-indigo-700 font-semibold px-8 py-3 rounded-full shadow hover:scale-105 transition">
-            Let’s Talk
+        <a href="#projects" class="bg-white text-indigo-700 px-8 py-3 rounded-full font-semibold">
+            View My Work
         </a>
-    </div>
-
-    <div class="md:w-1/2 flex justify-center mt-8 md:mt-0 animate-fade-in-right">
-        <img src="me.jpg" alt="Benjamin Mosweta" class="rounded-full w-72 h-72 object-cover border-4 border-white shadow-lg">
     </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="bg-white p-10 rounded-lg shadow-lg mb-14">
-    <h2 class="text-4xl font-bold text-center text-indigo-700 mb-8">About Me</h2>
+<section id="about" class="bg-white rounded-lg shadow p-10 mb-14">
+    <h2 class="text-3xl font-bold text-indigo-700 mb-6">About Me</h2>
 
-    <p class="text-lg mb-4">
-        I’m a motivated web developer with a strong interest in building reliable, easy-to-use systems that solve real-world problems. My experience comes from personal projects, academic work, and hands-on IT support environments.
+    <p class="mb-4">
+        I am a web developer with over <strong>four years of professional freelance experience</strong>, working with individuals, small businesses, and institutions to build reliable web-based systems that support daily operations.
     </p>
 
-    <p class="text-lg mb-4">
-        I mainly work with <strong>PHP, HTML, CSS, JavaScript, and MySQL</strong>, and I’m comfortable developing both frontend interfaces and backend logic. I also have experience setting up systems, troubleshooting technical issues, and supporting users in day-to-day IT operations.
+    <p class="mb-4">
+        Throughout my freelance journey, I have designed and developed systems such as <strong>school management systems, garage management systems, salon management systems, and portfolio websites</strong>. My work typically involves gathering requirements, designing databases, developing backend logic using PHP and MySQL, and creating clean, user-friendly interfaces.
     </p>
 
-    <p class="text-lg">
-        I enjoy learning by doing, improving my skills through practice, and working with teams where clear communication and accountability matter. I’m currently looking for opportunities where I can grow as a developer and contribute to meaningful projects.
+    <p class="mb-4">
+        In addition to development, I have provided ongoing system support, updates, bug fixes, and basic hosting assistance for clients. This experience has strengthened my problem-solving skills, time management, and ability to communicate technical ideas clearly to non-technical users.
     </p>
-</section>
 
-<!-- SKILLS -->
-<section id="skills" class="bg-gray-100 p-10 rounded-lg shadow-lg mb-14">
-    <h2 class="text-4xl font-bold text-center text-indigo-700 mb-8">Skills</h2>
-
-    <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded shadow">
-            <h3 class="text-xl font-semibold mb-3">Web Development</h3>
-            <ul class="list-disc list-inside space-y-2">
-                <li>PHP backend development</li>
-                <li>HTML, CSS, JavaScript (ES6)</li>
-                <li>MySQL database design</li>
-                <li>CRUD systems and authentication</li>
-                <li>Responsive web design</li>
-                <li>Git & GitHub version control</li>
-            </ul>
-        </div>
-
-        <div class="bg-white p-6 rounded shadow">
-            <h3 class="text-xl font-semibold mb-3">IT Support</h3>
-            <ul class="list-disc list-inside space-y-2">
-                <li>Hardware & software troubleshooting</li>
-                <li>Windows & Linux systems</li>
-                <li>Basic networking</li>
-                <li>User technical support</li>
-            </ul>
-        </div>
-
-        <div class="bg-white p-6 rounded shadow">
-            <h3 class="text-xl font-semibold mb-3">Professional Skills</h3>
-            <ul class="list-disc list-inside space-y-2">
-                <li>Documentation & reporting</li>
-                <li>Microsoft Office tools</li>
-                <li>Clear communication</li>
-                <li>Problem-solving mindset</li>
-            </ul>
-        </div>
-    </div>
+    <p>
+        I enjoy building practical solutions, learning through real-world projects, and continuously improving my skills. I am currently open to opportunities where I can grow further as a developer and contribute to meaningful, impactful projects.
+    </p>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="bg-white p-10 rounded-lg shadow-lg mb-14">
-    <h2 class="text-4xl font-bold text-center text-indigo-700 mb-8">Projects</h2>
+<section id="projects" class="bg-gray-100 rounded-lg shadow p-10 mb-14">
+    <h2 class="text-3xl font-bold text-indigo-700 mb-8 text-center">Projects</h2>
 
-    <div class="grid md:grid-cols-3 gap-6">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <div class="bg-gray-50 rounded shadow p-5">
-            <h3 class="text-xl font-semibold mb-2">E-commerce System</h3>
+        <a href="https://github.com/Moswettta/school-management-system" target="_blank"
+           class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition block">
+            <i class="fas fa-school text-4xl text-indigo-600 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">School Management System</h3>
             <p class="text-sm mb-3">
-                A full-stack e-commerce project with user accounts, product listings, shopping cart functionality, and basic order processing.
+                Manages students, teachers, classes, results, and basic school administration.
             </p>
-            <p class="text-xs text-gray-500">PHP · MySQL · JavaScript</p>
-        </div>
+            <span class="text-xs text-gray-500">PHP · MySQL · HTML · CSS</span>
+        </a>
 
-        <div class="bg-gray-50 rounded shadow p-5">
-            <h3 class="text-xl font-semibold mb-2">Task Management System</h3>
+        <a href="https://github.com/Moswettta/garage-management-system" target="_blank"
+           class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition block">
+            <i class="fas fa-car text-4xl text-green-600 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Garage Management System</h3>
             <p class="text-sm mb-3">
-                A simple web application for creating tasks, assigning responsibilities, and tracking progress within a small team.
+                Tracks vehicles, service history, repairs, and customer records.
             </p>
-            <p class="text-xs text-gray-500">PHP · MySQL</p>
-        </div>
+            <span class="text-xs text-gray-500">PHP · MySQL · JavaScript</span>
+        </a>
 
-        <div class="bg-gray-50 rounded shadow p-5">
-            <h3 class="text-xl font-semibold mb-2">Personal Portfolio</h3>
+        <a href="https://github.com/Moswettta/salon-management-system" target="_blank"
+           class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition block">
+            <i class="fas fa-scissors text-4xl text-pink-600 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Salon Management System</h3>
             <p class="text-sm mb-3">
-                A responsive portfolio website designed to showcase skills, projects, and contact information.
+                Handles appointments, services, staff scheduling, and client management.
             </p>
-            <p class="text-xs text-gray-500">HTML · CSS · JavaScript</p>
-        </div>
+            <span class="text-xs text-gray-500">PHP · MySQL</span>
+        </a>
+
+        <a href="https://github.com/Moswettta/portfolio-website" target="_blank"
+           class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition block">
+            <i class="fas fa-user-circle text-4xl text-purple-600 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
+            <p class="text-sm mb-3">
+                A responsive portfolio site for showcasing skills and projects.
+            </p>
+            <span class="text-xs text-gray-500">HTML · CSS · JavaScript</span>
+        </a>
 
     </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="bg-gray-100 p-10 rounded-lg shadow-lg">
-    <h2 class="text-4xl font-bold text-center text-indigo-700 mb-6">Get in Touch</h2>
-
+<section id="contact" class="bg-white rounded-lg shadow p-10">
+    <h2 class="text-3xl font-bold text-indigo-700 mb-4 text-center">Get in Touch</h2>
     <p class="text-center mb-6">
-        If you’d like to work together, ask a question, or just say hello, feel free to send a message.
+        Feel free to reach out for freelance work, collaborations, or opportunities.
     </p>
 
-    <form id="contactForm" class="max-w-lg mx-auto space-y-4">
-        <input id="name" type="text" placeholder="Your name" class="w-full p-3 border rounded" required>
-        <input id="email" type="email" placeholder="Your email" class="w-full p-3 border rounded" required>
-        <textarea id="message" rows="5" placeholder="Your message" class="w-full p-3 border rounded" required></textarea>
-
-        <button type="button" onclick="sendMessage()" class="w-full bg-indigo-600 text-white py-3 rounded-full font-semibold">
-            Send
-        </button>
+    <form class="max-w-md mx-auto space-y-4">
+        <input class="w-full p-3 border rounded" placeholder="Your name">
+        <input class="w-full p-3 border rounded" placeholder="Your email">
+        <textarea class="w-full p-3 border rounded" rows="4" placeholder="Your message"></textarea>
+        <button class="w-full bg-indigo-600 text-white py-3 rounded-full font-semibold">Send</button>
     </form>
 </section>
 
 </main>
 
-<script>
-function sendMessage() {
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-
-    const whatsappNumber = "254XXXXXXXXX"; // replace with your number
-
-    const text = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
-    window.open(`https://wa.me/${whatsappNumber}?text=${text}`, "_blank");
-
-    document.getElementById("contactForm").reset();
-    alert("Thanks for reaching out! I’ll get back to you soon.");
-}
-</script>
-
 </body>
 </html>
-
-
