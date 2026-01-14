@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benjamin Mosweta | Web Developer</title>
 
-    <!-- Tailwind -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Font -->
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
@@ -29,7 +29,7 @@
 <header class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <h1 class="text-2xl font-bold text-indigo-700">Benjamin Mosweta</h1>
-        <nav class="hidden md:flex space-x-6">
+        <nav class="hidden md:flex space-x-6 font-medium">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
@@ -42,15 +42,21 @@
 <main class="max-w-7xl mx-auto px-6 py-10">
 
 <!-- HERO -->
-<section id="home" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg p-10 mb-14 flex flex-col md:flex-row items-center">
+<section id="home" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg p-10 mb-14 flex flex-col md:flex-row items-center gap-10">
     <div class="md:w-1/2">
         <h2 class="text-5xl font-bold mb-4">Hi, I’m Benjamin</h2>
         <p class="text-xl mb-6">
-            A web developer experienced in building practical management systems using PHP, MySQL, and JavaScript.
+            A freelance web developer with 4+ years of experience building real-world management systems using PHP and MySQL.
         </p>
-        <a href="#projects" class="bg-white text-indigo-700 px-8 py-3 rounded-full font-semibold">
+        <a href="#projects" class="bg-white text-indigo-700 px-8 py-3 rounded-full font-semibold shadow">
             View My Work
         </a>
+    </div>
+
+    <!-- IMAGE RESTORED -->
+    <div class="md:w-1/2 flex justify-center">
+        <img src="PA.JPG" alt="Benjamin Mosweta"
+             class="w-72 h-72 object-cover rounded-full border-4 border-white shadow-lg">
     </div>
 </section>
 
@@ -59,19 +65,15 @@
     <h2 class="text-3xl font-bold text-indigo-700 mb-6">About Me</h2>
 
     <p class="mb-4">
-        I am a web developer with over <strong>four years of professional freelance experience</strong>, working with individuals, small businesses, and institutions to build reliable web-based systems that support daily operations.
+        I am a web developer with over <strong>four years of professional freelance experience</strong>, delivering practical web-based solutions to individuals, schools, salons, garages, and small businesses.
     </p>
 
     <p class="mb-4">
-        Throughout my freelance journey, I have designed and developed systems such as <strong>school management systems, garage management systems, salon management systems, and portfolio websites</strong>. My work typically involves gathering requirements, designing databases, developing backend logic using PHP and MySQL, and creating clean, user-friendly interfaces.
-    </p>
-
-    <p class="mb-4">
-        In addition to development, I have provided ongoing system support, updates, bug fixes, and basic hosting assistance for clients. This experience has strengthened my problem-solving skills, time management, and ability to communicate technical ideas clearly to non-technical users.
+        My work focuses on building management systems that automate daily operations such as record keeping, scheduling, billing, reporting, and user management. I handle both frontend and backend development using <strong>PHP, MySQL, HTML, CSS, and JavaScript</strong>.
     </p>
 
     <p>
-        I enjoy building practical solutions, learning through real-world projects, and continuously improving my skills. I am currently open to opportunities where I can grow further as a developer and contribute to meaningful, impactful projects.
+        Beyond development, I also provide system maintenance, updates, bug fixes, and technical support. I enjoy solving real problems, working directly with clients, and continuously improving my skills through hands-on projects.
     </p>
 </section>
 
@@ -81,44 +83,76 @@
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <a href="https://github.com/Moswettta/school-management-system" target="_blank"
+        <!-- SCHOOL -->
+        <a href="https://github.com/Moswettta" target="_blank"
            class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition block">
             <i class="fas fa-school text-4xl text-indigo-600 mb-4"></i>
             <h3 class="text-xl font-semibold mb-2">School Management System</h3>
-            <p class="text-sm mb-3">
-                Manages students, teachers, classes, results, and basic school administration.
-            </p>
-            <span class="text-xs text-gray-500">PHP · MySQL · HTML · CSS</span>
+            <p class="text-sm">Student records, results, classes, teachers, and administration.</p>
         </a>
 
-        <a href="https://github.com/Moswettta/garage-management-system" target="_blank"
+        <!-- GARAGE -->
+        <a href="https://github.com/Moswettta" target="_blank"
            class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition block">
             <i class="fas fa-car text-4xl text-green-600 mb-4"></i>
             <h3 class="text-xl font-semibold mb-2">Garage Management System</h3>
-            <p class="text-sm mb-3">
-                Tracks vehicles, service history, repairs, and customer records.
-            </p>
-            <span class="text-xs text-gray-500">PHP · MySQL · JavaScript</span>
+            <p class="text-sm">Vehicle service history, repairs, customers, and payments.</p>
         </a>
 
-        <a href="https://github.com/Moswettta/salon-management-system" target="_blank"
+        <!-- SALON -->
+        <a href="https://github.com/Moswettta" target="_blank"
            class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition block">
             <i class="fas fa-scissors text-4xl text-pink-600 mb-4"></i>
             <h3 class="text-xl font-semibold mb-2">Salon Management System</h3>
-            <p class="text-sm mb-3">
-                Handles appointments, services, staff scheduling, and client management.
-            </p>
-            <span class="text-xs text-gray-500">PHP · MySQL</span>
+            <p class="text-sm">Appointments, services, staff schedules, and clients.</p>
         </a>
 
-        <a href="https://github.com/Moswettta/portfolio-website" target="_blank"
+        <!-- INVENTORY -->
+        <a href="https://github.com/Moswettta" target="_blank"
            class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition block">
-            <i class="fas fa-user-circle text-4xl text-purple-600 mb-4"></i>
-            <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
-            <p class="text-sm mb-3">
-                A responsive portfolio site for showcasing skills and projects.
-            </p>
-            <span class="text-xs text-gray-500">HTML · CSS · JavaScript</span>
+            <i class="fas fa-boxes-stacked text-4xl text-orange-600 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Inventory Management System</h3>
+            <p class="text-sm">Stock tracking, suppliers, low-stock alerts, and reports.</p>
+        </a>
+
+        <!-- POS -->
+        <a href="https://github.com/Moswettta" target="_blank"
+           class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition block">
+            <i class="fas fa-cash-register text-4xl text-emerald-600 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Point of Sale (POS)</h3>
+            <p class="text-sm">Sales processing, receipts, product pricing, and summaries.</p>
+        </a>
+
+        <!-- CLINIC -->
+        <a href="https://github.com/Moswettta" target="_blank"
+           class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition block">
+            <i class="fas fa-notes-medical text-4xl text-red-600 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Clinic Records System</h3>
+            <p class="text-sm">Patient records, appointments, and basic medical history.</p>
+        </a>
+
+        <!-- ATTENDANCE -->
+        <a href="https://github.com/Moswettta" target="_blank"
+           class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition block">
+            <i class="fas fa-user-check text-4xl text-blue-600 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Attendance Management</h3>
+            <p class="text-sm">Staff or student attendance tracking and reporting.</p>
+        </a>
+
+        <!-- RENTAL -->
+        <a href="https://github.com/Moswettta" target="_blank"
+           class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition block">
+            <i class="fas fa-building text-4xl text-gray-700 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Rental Management System</h3>
+            <p class="text-sm">Tenants, rent payments, properties, and invoices.</p>
+        </a>
+
+        <!-- BILLING -->
+        <a href="https://github.com/Moswettta" target="_blank"
+           class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition block">
+            <i class="fas fa-file-invoice-dollar text-4xl text-purple-600 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Billing & Invoicing System</h3>
+            <p class="text-sm">Client invoices, payment tracking, and financial records.</p>
         </a>
 
     </div>
@@ -128,14 +162,16 @@
 <section id="contact" class="bg-white rounded-lg shadow p-10">
     <h2 class="text-3xl font-bold text-indigo-700 mb-4 text-center">Get in Touch</h2>
     <p class="text-center mb-6">
-        Feel free to reach out for freelance work, collaborations, or opportunities.
+        Available for freelance work, collaborations, and opportunities.
     </p>
 
     <form class="max-w-md mx-auto space-y-4">
         <input class="w-full p-3 border rounded" placeholder="Your name">
         <input class="w-full p-3 border rounded" placeholder="Your email">
         <textarea class="w-full p-3 border rounded" rows="4" placeholder="Your message"></textarea>
-        <button class="w-full bg-indigo-600 text-white py-3 rounded-full font-semibold">Send</button>
+        <button class="w-full bg-indigo-600 text-white py-3 rounded-full font-semibold">
+            Send Message
+        </button>
     </form>
 </section>
 
