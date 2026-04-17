@@ -1,233 +1,203 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Benjamin Mosweta | Web Developer & IT Support</title>
 
-<title>Benjamin Maosa | Portfolio & CV</title>
-
-<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-
-<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 body {
-  font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
 }
-
-/* GLASS EFFECT */
-.glass {
-  backdrop-filter: blur(14px);
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.08);
+.section-title {
+    font-size: 2rem;
+    font-weight: 800;
 }
-
-.dark .glass {
-  background: rgba(0,0,0,0.45);
+.card {
+    transition: all 0.3s ease;
 }
-
-/* PRINT FIX */
-@media print {
-  .no-print {
-    display: none !important;
-  }
-  body {
-    background: white !important;
-    color: black !important;
-  }
+.card:hover {
+    transform: translateY(-5px);
 }
 </style>
 </head>
 
-<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100">
+<body>
 
-<!-- NAV -->
-<header class="sticky top-0 z-50 glass no-print">
+<!-- HEADER -->
+<header class="bg-white/80 backdrop-blur shadow-sm sticky top-0 z-50">
 <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-extrabold text-indigo-700 tracking-tight">
+        Benjamin<span class="text-gray-800">.</span>
+    </h1>
 
-<h1 class="text-xl font-extrabold text-indigo-500">
-Benjamin<span class="text-white">.Dev</span>
-</h1>
+    <nav class="hidden md:flex space-x-8 font-medium text-sm">
+        <a href="#home" class="hover:text-indigo-600">Home</a>
+        <a href="#about" class="hover:text-indigo-600">About</a>
+        <a href="#skills" class="hover:text-indigo-600">Skills</a>
+        <a href="#projects" class="hover:text-indigo-600">Projects</a>
+        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+    </nav>
 
-<nav class="hidden md:flex gap-6 text-sm font-medium">
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#cv">CV</a>
-<a href="#contact">Contact</a>
-</nav>
-
-<div class="flex gap-3">
-
-<a href="CV.pdf" download
-class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm">
-📄 Download CV
-</a>
-
-<button onclick="window.print()"
-class="px-4 py-2 rounded-xl bg-green-600 hover:bg-green-700 text-white text-sm">
-🖨 Print CV
-</button>
-
-<button onclick="document.documentElement.classList.toggle('dark')"
-class="px-3 py-2 rounded-xl bg-slate-200 dark:bg-slate-800">
-🌙
-</button>
-
+    <button id="menuBtn" class="md:hidden text-xl">
+        <i class="fas fa-bars"></i>
+    </button>
 </div>
 
+<div id="mobileMenu" class="hidden md:hidden bg-white px-6 pb-4">
+    <a href="#home" class="block py-2">Home</a>
+    <a href="#about" class="block py-2">About</a>
+    <a href="#skills" class="block py-2">Skills</a>
+    <a href="#projects" class="block py-2">Projects</a>
+    <a href="#contact" class="block py-2">Contact</a>
 </div>
 </header>
 
-<!-- HERO WITH IMAGE -->
-<section class="max-w-7xl mx-auto px-6 py-20 text-center">
+<main class="max-w-7xl mx-auto px-6 py-10">
 
-<img src="profile.jpg"
-class="w-40 h-40 mx-auto rounded-full border-4 border-indigo-500 shadow-lg mb-6 object-cover no-print"
-alt="Profile Image">
+<!-- HERO -->
+<section id="home" class="grid md:grid-cols-2 gap-10 items-center mb-20">
 
-<h1 class="text-5xl md:text-6xl font-extrabold">
-Benjamin Maosa Mosweta
-</h1>
+<div>
+    <p class="text-indigo-600 font-semibold mb-2">Web Developer & IT Support</p>
 
-<p class="text-indigo-400 mt-3 font-semibold">
-ICT Support Specialist • IT Support • PHP Web Developer
-</p>
+    <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+        Building Practical Systems That Solve Real Problems
+    </h2>
 
-<p class="text-slate-400 mt-6 max-w-3xl mx-auto">
-Full-stack developer and ICT support specialist experienced in systems administration, networking, and PHP/MySQL development for automation systems.
-</p>
+    <p class="text-gray-600 text-lg mb-6">
+        I specialize in developing web-based systems for businesses and providing reliable IT support.
+        With 4+ years of experience, I focus on performance, usability, and real-world functionality.
+    </p>
+
+    <div class="flex gap-4">
+        <a href="#projects" class="bg-indigo-600 text-white px-6 py-3 rounded-full shadow hover:bg-indigo-700">
+            View Projects
+        </a>
+        <a href="#contact" class="border px-6 py-3 rounded-full hover:bg-gray-100">
+            Contact Me
+        </a>
+    </div>
+</div>
+
+<div class="flex justify-center">
+    <img src="PROFILE.jpg"
+         class="w-72 h-72 object-cover rounded-full shadow-xl border-4 border-white">
+</div>
 
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="max-w-7xl mx-auto px-6 py-10">
-<div class="glass p-8 rounded-2xl">
-<h2 class="text-3xl font-bold mb-4">Professional Summary</h2>
-<p>
-ICT Support Specialist with experience in IT support, systems administration, and network troubleshooting in enterprise environments.
-Skilled in Windows/Linux systems, LAN/WAN infrastructure, and PHP/MySQL development for business automation systems.
+<section id="about" class="mb-20">
+<h2 class="section-title mb-6">About Me</h2>
+
+<div class="bg-white p-8 rounded-2xl shadow">
+<p class="mb-4 text-gray-600">
+I am a <strong>full-stack web developer and IT support specialist</strong> with over four years of experience
+delivering systems for schools, businesses, and service providers.
+</p>
+
+<p class="mb-4 text-gray-600">
+I design and build systems that automate operations like <strong>record management, billing, scheduling, and reporting</strong>
+using PHP, MySQL, and modern web technologies.
+</p>
+
+<p class="text-gray-600">
+Beyond development, I provide <strong>technical support, networking setup, and system maintenance</strong>,
+ensuring reliability, security, and efficiency in daily operations.
 </p>
 </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="max-w-7xl mx-auto px-6 py-16">
-
-<h2 class="text-3xl font-bold mb-6">Core Skills</h2>
+<section id="skills" class="mb-20">
+<h2 class="section-title mb-6">Skills</h2>
 
 <div class="grid md:grid-cols-3 gap-6">
 
-<div class="glass p-6 rounded-xl">IT Support & Helpdesk</div>
-<div class="glass p-6 rounded-xl">Windows & Linux Systems</div>
-<div class="glass p-6 rounded-xl">Networking (TCP/IP, DNS, DHCP)</div>
-<div class="glass p-6 rounded-xl">PHP & MySQL Development</div>
-<div class="glass p-6 rounded-xl">Microsoft 365</div>
-<div class="glass p-6 rounded-xl">Git & GitHub</div>
+<div class="card bg-white p-6 rounded-2xl shadow">
+<h3 class="font-bold mb-3">Development</h3>
+<div class="flex flex-wrap gap-2 text-sm">
+<span class="bg-indigo-100 px-3 py-1 rounded-full">PHP</span>
+<span class="bg-indigo-100 px-3 py-1 rounded-full">MySQL</span>
+<span class="bg-indigo-100 px-3 py-1 rounded-full">JavaScript</span>
+<span class="bg-indigo-100 px-3 py-1 rounded-full">HTML/CSS</span>
+</div>
+</div>
+
+<div class="card bg-white p-6 rounded-2xl shadow">
+<h3 class="font-bold mb-3">IT Support</h3>
+<div class="flex flex-wrap gap-2 text-sm">
+<span class="bg-green-100 px-3 py-1 rounded-full">Troubleshooting</span>
+<span class="bg-green-100 px-3 py-1 rounded-full">Windows/Linux</span>
+<span class="bg-green-100 px-3 py-1 rounded-full">Networking</span>
+</div>
+</div>
+
+<div class="card bg-white p-6 rounded-2xl shadow">
+<h3 class="font-bold mb-3">Security</h3>
+<div class="flex flex-wrap gap-2 text-sm">
+<span class="bg-red-100 px-3 py-1 rounded-full">Access Control</span>
+<span class="bg-red-100 px-3 py-1 rounded-full">Backups</span>
+<span class="bg-red-100 px-3 py-1 rounded-full">System Updates</span>
+</div>
+</div>
 
 </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="max-w-7xl mx-auto px-6 py-16">
+<section id="projects" class="mb-20">
+<h2 class="section-title mb-6">Projects</h2>
 
-<h2 class="text-3xl font-bold mb-6">Projects</h2>
+<div class="grid md:grid-cols-3 gap-6">
 
-<div class="grid md:grid-cols-2 gap-6">
-
-<div class="glass p-6 rounded-xl">
-<h3 class="text-indigo-400 font-bold">Smart Parking System</h3>
-<p>PHP & MySQL system with role-based access control.</p>
+<div class="card bg-white p-6 rounded-2xl shadow">
+<h3 class="font-bold mb-2">School Management System</h3>
+<p class="text-sm text-gray-600">Full system for managing students, fees, exams, and reports.</p>
 </div>
 
-<div class="glass p-6 rounded-xl">
-<h3 class="text-indigo-400 font-bold">Garage Management System</h3>
-<p>Vehicle service tracking and billing automation.</p>
+<div class="card bg-white p-6 rounded-2xl shadow">
+<h3 class="font-bold mb-2">Garage Management System</h3>
+<p class="text-sm text-gray-600">Tracks services, vehicles, and billing operations.</p>
 </div>
 
-<div class="glass p-6 rounded-xl">
-<h3 class="text-indigo-400 font-bold">Salon Booking System</h3>
-<p>Online appointment scheduling system.</p>
+<div class="card bg-white p-6 rounded-2xl shadow">
+<h3 class="font-bold mb-2">Salon System</h3>
+<p class="text-sm text-gray-600">Appointment booking and staff management.</p>
 </div>
-
-<div class="glass p-6 rounded-xl">
-<h3 class="text-indigo-400 font-bold">Finance Tracker</h3>
-<p>Income & expense tracking system.</p>
-</div>
-
-</div>
-</section>
-
-<!-- CV SECTION -->
-<section id="cv" class="max-w-7xl mx-auto px-6 py-16">
-
-<h2 class="text-3xl font-bold mb-6">Curriculum Vitae</h2>
-
-<div class="glass p-10 rounded-2xl space-y-6">
-
-<h3 class="font-bold text-xl">Contact</h3>
-<p>📞 +254 798 458 270</p>
-<p>✉️ benjaminmosweta@gmail.com</p>
-<p>LinkedIn: www.linkedin.com/in/benjamin-maosa-86b27019b</p>
-<p>Portfolio: https://moswettta.github.io/MaosaDevPortfolio/</p>
-
-<hr class="opacity-20">
-
-<h3 class="font-bold text-xl">Professional Experience</h3>
-
-<p><b>IT Support Intern – National Housing Corporation</b></p>
-<p>Provided IT support, networking, system maintenance, and troubleshooting.</p>
-
-<br>
-
-<p><b>IT & Marketing Intern – APRT SACCO</b></p>
-<p>Cloud backup, staff training, IT support operations.</p>
-
-<hr class="opacity-20">
-
-<h3 class="font-bold text-xl">Education</h3>
-<p>BBIT – Mount Kenya University (2023–2025)</p>
-<p>Diploma – Mount Kenya University (2021–2022)</p>
-<p>Certificate – Mount Kenya University (2018–2019)</p>
-
-<hr class="opacity-20">
-
-<h3 class="font-bold text-xl">Technologies</h3>
-<p>PHP, MySQL, JavaScript, Linux, Windows Server, Networking, Git</p>
 
 </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="max-w-7xl mx-auto px-6 py-16 text-center">
+<section id="contact">
+<h2 class="section-title mb-6 text-center">Contact</h2>
 
-<h2 class="text-3xl font-bold mb-6">Contact</h2>
+<div class="bg-white p-8 rounded-2xl shadow text-center">
+<p class="mb-2">📞 +254 798 458 270</p>
+<p class="mb-2">✉️ benjaminmosweta@gmail.com</p>
+<p class="mb-4">📍 Nairobi, Kenya</p>
 
-<div class="glass p-8 rounded-2xl">
-
-<p>📞 +254 798 458 270</p>
-<p>✉️ benjaminmosweta@gmail.com</p>
-
-<a href="CV.pdf" download
-class="inline-block mt-6 px-6 py-3 bg-indigo-600 rounded-xl text-white">
-Download CV
+<a href="https://github.com/Moswettta" class="text-indigo-600 underline">
+GitHub Profile
 </a>
-
 </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="text-center py-10 text-sm text-slate-500 no-print">
-© 2026 Benjamin Maosa
-</footer>
+</main>
 
 <script>
-document.documentElement.classList.add('dark');
+document.getElementById("menuBtn").onclick = () => {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+};
 </script>
 
 </body>
