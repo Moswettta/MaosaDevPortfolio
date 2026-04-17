@@ -3,17 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Benjamin Mosweta | Cyber Portfolio</title>
+
+<title>Benjamin Maosa | Portfolio & CV</title>
 
 <!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- AOS -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<!-- PDF -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 
 <!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -21,178 +18,259 @@
 <style>
 body {
   font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
-  background: #050816;
-  color: white;
 }
 
-/* CYBER BACKGROUND */
-#bg {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: radial-gradient(circle at top, #1a1f3c, #050816);
-  overflow: hidden;
-}
-
-.glow {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: #4f46e5;
-  filter: blur(120px);
-  opacity: 0.3;
-  animation: move 10s infinite alternate;
-}
-
-@keyframes move {
-  from { transform: translate(0,0); }
-  to { transform: translate(200px,100px); }
-}
-
+/* ===== TOP GLASS SYSTEM ===== */
 .glass {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(14px);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.dark .glass {
+  background: rgba(0,0,0,0.45);
+}
+
+/* Smooth print fix */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
 }
 </style>
 </head>
 
-<body>
-
-<!-- BACKGROUND -->
-<div id="bg">
-<div class="glow"></div>
-</div>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100">
 
 <!-- NAV -->
-<header class="fixed top-0 w-full glass p-4 flex justify-between z-50">
-<h1 class="font-bold text-indigo-400">Benjamin.Dev</h1>
+<header class="sticky top-0 z-50 glass no-print">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+<h1 class="text-xl font-extrabold text-indigo-500">
+Benjamin<span class="text-white">.Dev</span>
+</h1>
+
+<nav class="hidden md:flex gap-6 text-sm font-medium">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#cv">CV</a>
+<a href="#contact">Contact</a>
+</nav>
 
 <div class="flex gap-3">
-<button onclick="downloadCV()" class="bg-indigo-600 px-4 py-2 rounded-xl">CV</button>
-<a href="https://wa.me/254798458270" target="_blank" class="bg-green-500 px-4 py-2 rounded-xl">WhatsApp</a>
+
+<!-- DOWNLOAD CV -->
+<a href="CV.pdf" download
+class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm">
+📄 Download CV
+</a>
+
+<!-- PRINT CV -->
+<button onclick="window.print()"
+class="px-4 py-2 rounded-xl bg-green-600 hover:bg-green-700 text-white text-sm">
+🖨 Print CV
+</button>
+
+<!-- DARK MODE -->
+<button onclick="document.documentElement.classList.toggle('dark')"
+class="px-3 py-2 rounded-xl bg-slate-200 dark:bg-slate-800">
+🌙
+</button>
+
+</div>
+
 </div>
 </header>
 
 <!-- HERO -->
-<section class="pt-28 text-center" data-aos="fade-up">
+<section class="max-w-7xl mx-auto px-6 py-20 text-center">
 
-<img src="PROFILE.jpg" class="w-40 h-40 mx-auto rounded-full border-4 border-indigo-500 shadow-xl">
+<h1 class="text-5xl md:text-6xl font-extrabold">
+Benjamin Maosa Mosweta
+</h1>
 
-<h1 class="text-4xl font-bold mt-4">Benjamin Mosweta</h1>
-<p class="text-indigo-300">Full Stack Developer • IT Support • Network Engineer</p>
+<p class="text-indigo-400 mt-3 font-semibold">
+ICT Support Specialist • IT Support • PHP Developer
+</p>
 
+<p class="text-slate-400 mt-6 max-w-3xl mx-auto">
+Full-stack developer and ICT support specialist experienced in systems administration, networking, and PHP/MySQL web applications for automation and business systems.
+</p>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="max-w-7xl mx-auto px-6 py-10">
+<div class="glass p-8 rounded-2xl">
+<h2 class="text-3xl font-bold mb-4">Professional Summary</h2>
+<p>
+ICT Support Specialist with hands-on experience in IT support, systems administration, and network troubleshooting gained through enterprise environments.
+Skilled in Windows/Linux systems, LAN/WAN infrastructure, and end-user support.
+Also experienced in PHP & MySQL system development for automation and business solutions.
+</p>
+</div>
 </section>
 
 <!-- SKILLS -->
-<section class="max-w-5xl mx-auto p-6 mt-10" data-aos="fade-up">
+<section id="skills" class="max-w-7xl mx-auto px-6 py-16">
 
-<h2 class="text-2xl font-bold mb-6">Skills</h2>
+<h2 class="text-3xl font-bold mb-6">Core Skills</h2>
 
-<div class="space-y-4">
+<div class="grid md:grid-cols-3 gap-6">
 
-<div>
-<p>PHP</p>
-<div class="w-full bg-gray-700 rounded-full">
-<div class="bg-indigo-500 h-2 rounded-full w-[90%]"></div>
-</div>
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold">IT Support</h3>
+<p>Helpdesk, troubleshooting, hardware & software support</p>
 </div>
 
-<div>
-<p>JavaScript</p>
-<div class="w-full bg-gray-700 rounded-full">
-<div class="bg-green-500 h-2 rounded-full w-[85%]"></div>
-</div>
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold">Networking</h3>
+<p>TCP/IP, DNS, DHCP, VPN, LAN/WAN setup</p>
 </div>
 
-<div>
-<p>Python</p>
-<div class="w-full bg-gray-700 rounded-full">
-<div class="bg-yellow-500 h-2 rounded-full w-[75%]"></div>
-</div>
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold">Systems</h3>
+<p>Windows Server, Linux, virtualization</p>
 </div>
 
-<div>
-<p>Networking</p>
-<div class="w-full bg-gray-700 rounded-full">
-<div class="bg-red-500 h-2 rounded-full w-[88%]"></div>
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold">Web Dev</h3>
+<p>PHP, MySQL, HTML, JavaScript</p>
 </div>
+
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold">Cloud</h3>
+<p>Microsoft 365, SharePoint, OneDrive</p>
+</div>
+
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold">Tools</h3>
+<p>Git, GitHub, VMware, VirtualBox</p>
 </div>
 
 </div>
 </section>
 
-<!-- GITHUB PROJECTS -->
-<section class="max-w-6xl mx-auto p-6 mt-10" data-aos="fade-up">
+<!-- PROJECTS -->
+<section id="projects" class="max-w-7xl mx-auto px-6 py-16">
 
-<h2 class="text-2xl font-bold mb-6">Live GitHub Projects</h2>
+<h2 class="text-3xl font-bold mb-6">Projects</h2>
 
-<div id="repos" class="grid md:grid-cols-2 gap-4"></div>
+<div class="grid md:grid-cols-2 gap-6">
 
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold text-indigo-400">Smart Parking System</h3>
+<p>PHP & MySQL system with role-based access control and automation.</p>
+</div>
+
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold text-indigo-400">Garage Management System</h3>
+<p>Vehicle service tracking and billing automation system.</p>
+</div>
+
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold text-indigo-400">Salon Booking System</h3>
+<p>Appointment scheduling system reducing conflicts.</p>
+</div>
+
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold text-indigo-400">Finance Tracker</h3>
+<p>Income & expense tracking system with reports.</p>
+</div>
+
+</div>
 </section>
 
-<!-- CV CONTENT -->
-<section id="cv" class="hidden bg-white text-black p-10">
+<!-- CV SECTION (PRINT FRIENDLY) -->
+<section id="cv" class="max-w-7xl mx-auto px-6 py-16">
 
-<h1 class="text-2xl font-bold">Benjamin Mosweta</h1>
-<p>Full Stack Developer | IT Support | Network Engineer</p>
+<h2 class="text-3xl font-bold mb-6">Curriculum Vitae</h2>
 
-<h2>Skills</h2>
-<ul>
-<li>PHP, JavaScript, Python</li>
-<li>Networking (TCP/IP, DNS, DHCP)</li>
-<li>Linux & Windows Server</li>
+<div class="glass p-10 rounded-2xl space-y-6">
+
+<!-- CONTACT -->
+<div>
+<h3 class="font-bold text-xl">Contact Information</h3>
+<p>📞 +254 798 458 270</p>
+<p>✉️ benjaminmosweta@gmail.com</p>
+<p>📍 Nairobi, Kenya</p>
+<p>LinkedIn: www.linkedin.com/in/benjamin-maosa-86b27019b</p>
+<p>Portfolio: https://moswettta.github.io/MaosaDevPortfolio/</p>
+</div>
+
+<!-- EXPERIENCE -->
+<div>
+<h3 class="font-bold text-xl">Experience</h3>
+<p><b>IT Support Intern – National Housing Corporation (2025)</b></p>
+<ul class="list-disc ml-6">
+<li>Provided IT support to 50+ users</li>
+<li>Network troubleshooting & maintenance</li>
+<li>System installation & configuration</li>
 </ul>
 
-<h2>Experience</h2>
-<ul>
-<li>Smart Parking System</li>
-<li>Garage Management System</li>
-<li>Automation Scripts (Python)</li>
+<br>
+
+<p><b>IT Support Intern – National Housing Corporation (2022)</b></p>
+<ul class="list-disc ml-6">
+<li>Supported 100+ users</li>
+<li>LAN/WAN troubleshooting</li>
 </ul>
 
+<br>
+
+<p><b>IT & Marketing Intern – APRT SACCO</b></p>
+<ul class="list-disc ml-6">
+<li>Cloud backup implementation</li>
+<li>User training & support</li>
+</ul>
+</div>
+
+<!-- EDUCATION -->
+<div>
+<h3 class="font-bold text-xl">Education</h3>
+<p>BBIT – Mount Kenya University (2023–2025)</p>
+<p>Diploma – Mount Kenya University (2021–2022)</p>
+<p>Certificate – Mount Kenya University (2018–2019)</p>
+</div>
+
+<!-- SKILLS -->
+<div>
+<h3 class="font-bold text-xl">Technical Skills</h3>
+<p>PHP, MySQL, JavaScript, Windows Server, Linux, Networking, Git</p>
+</div>
+
+</div>
 </section>
 
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/254798458270"
-class="fixed bottom-5 right-5 bg-green-500 p-4 rounded-full text-white shadow-xl">
-<i class="fab fa-whatsapp text-2xl"></i>
+<!-- CONTACT -->
+<section id="contact" class="max-w-7xl mx-auto px-6 py-16 text-center">
+
+<h2 class="text-3xl font-bold mb-6">Contact</h2>
+
+<div class="glass p-8 rounded-2xl">
+<p>📞 +254 798 458 270</p>
+<p>✉️ benjaminmosweta@gmail.com</p>
+
+<a href="CV.pdf" download
+class="inline-block mt-6 px-6 py-3 bg-indigo-600 rounded-xl text-white">
+Download CV
 </a>
 
-<!-- SCRIPTS -->
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-10 text-sm text-slate-500 no-print">
+© 2026 Benjamin Maosa | Portfolio
+</footer>
+
 <script>
-AOS.init();
-
-// GitHub API loader
-fetch("https://api.github.com/users/Moswettta/repos")
-.then(res => res.json())
-.then(data => {
-  let html = "";
-  data.slice(0,6).forEach(repo => {
-    html += `
-    <a href="${repo.html_url}" target="_blank"
-    class="glass p-4 rounded-xl hover:scale-105 transition block">
-      <h3 class="font-bold text-indigo-300">${repo.name}</h3>
-      <p class="text-sm text-gray-300">${repo.description || "No description"}</p>
-    </a>`;
-  });
-  document.getElementById("repos").innerHTML = html;
-});
-
-// CV PDF (2 PAGE STYLE)
-function downloadCV() {
-  const element = document.getElementById("cv");
-
-  html2pdf().set({
-    margin: 0.5,
-    filename: "Benjamin_Mosweta_CV.pdf",
-    image: { type: "jpeg", quality: 0.98 },
-    html2canvas: { scale: 2 },
-    jsPDF: { unit: "in", format: "a4", orientation: "portrait" }
-  }).from(element).save();
-}
+document.documentElement.classList.add('dark');
 </script>
 
 </body>
