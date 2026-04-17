@@ -5,22 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Benjamin Mosweta | Portfolio</title>
 
+<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<!-- PDF LIBRARY (IMPORTANT) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<!-- Fonts + Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 body { font-family: 'Inter', sans-serif; }
+
 .glass {
   backdrop-filter: blur(14px);
   background: rgba(255,255,255,0.06);
 }
+
 .dark .glass {
-  background: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.5);
 }
 </style>
-
 </head>
 
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition duration-300">
@@ -33,26 +39,21 @@ body { font-family: 'Inter', sans-serif; }
 Benjamin<span class="text-slate-900 dark:text-white">.Dev</span>
 </h1>
 
-<nav class="hidden md:flex gap-6 text-sm font-medium">
-<a href="#skills" class="hover:text-indigo-400">Skills</a>
-<a href="#projects" class="hover:text-indigo-400">Projects</a>
-<a href="#contact" class="hover:text-indigo-400">Contact</a>
-</nav>
+<div class="flex gap-3 items-center">
 
-<div class="flex items-center gap-3">
+<!-- DOWNLOAD CV -->
+<button onclick="downloadCV()"
+class="px-4 py-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700">
+📄 Download CV
+</button>
 
-<a href="CV.pdf" download
-class="px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm hover:bg-indigo-700">
-📄 CV
-</a>
-
+<!-- DARK MODE -->
 <button onclick="document.documentElement.classList.toggle('dark')"
 class="px-3 py-2 rounded-xl bg-slate-200 dark:bg-slate-800">
 🌙
 </button>
 
 </div>
-
 </div>
 </header>
 
@@ -60,31 +61,18 @@ class="px-3 py-2 rounded-xl bg-slate-200 dark:bg-slate-800">
 <section class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
 
 <!-- TEXT -->
-<div class="text-center md:text-left">
-
+<div>
 <h1 class="text-4xl md:text-6xl font-extrabold">
 Benjamin Mosweta
 </h1>
 
 <p class="text-indigo-400 mt-3 font-semibold">
-Full-Stack Developer • IT Support Engineer • Network Administrator
+Full-Stack Developer • IT Support • Network Administrator
 </p>
 
-<p class="text-slate-400 mt-6 max-w-xl">
-I build PHP systems, manage IT infrastructure, and develop automation tools for real-world business operations.
+<p class="text-slate-400 mt-6">
+PHP Systems Developer with experience in IT infrastructure, networking, and automation.
 </p>
-
-<div class="mt-8 flex gap-4 justify-center md:justify-start">
-<a href="#projects"
-class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-xl text-white">
-View Projects
-</a>
-
-<a href="CV.pdf" download
-class="px-6 py-3 border border-slate-500 rounded-xl hover:bg-slate-800">
-Download CV
-</a>
-</div>
 
 </div>
 
@@ -94,7 +82,6 @@ Download CV
 <div class="absolute inset-0 bg-indigo-500 blur-3xl opacity-20 rounded-full"></div>
 
 <img src="PROFILE.jpg"
-alt="Profile"
 class="relative w-72 h-72 md:w-96 md:h-96 object-cover rounded-full border-4 border-indigo-500 shadow-2xl">
 </div>
 </div>
@@ -102,96 +89,76 @@ class="relative w-72 h-72 md:w-96 md:h-96 object-cover rounded-full border-4 bor
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="max-w-7xl mx-auto px-6 py-20">
+<section class="max-w-7xl mx-auto px-6 py-20">
 
-<h2 class="text-3xl font-extrabold mb-10">Tools & Technologies</h2>
+<h2 class="text-3xl font-extrabold mb-10">Skills & Technologies</h2>
 
 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-<div class="p-6 glass rounded-2xl border border-slate-700">
-<h3 class="font-bold mb-3">Web Development</h3>
+<div class="glass p-6 rounded-2xl border border-slate-700">
+<h3 class="font-bold">Web Development</h3>
 <p>PHP, MySQL, JavaScript, HTML, CSS</p>
 </div>
 
-<div class="p-6 glass rounded-2xl border border-slate-700">
-<h3 class="font-bold mb-3">Programming</h3>
-<p>Python, JavaScript, PHP (OOP), APIs</p>
+<div class="glass p-6 rounded-2xl border border-slate-700">
+<h3 class="font-bold">Programming</h3>
+<p>Python, JavaScript, PHP (OOP)</p>
 </div>
 
-<div class="p-6 glass rounded-2xl border border-slate-700">
-<h3 class="font-bold mb-3">Operating Systems</h3>
-<p>Windows Server, Linux</p>
-</div>
-
-<div class="p-6 glass rounded-2xl border border-slate-700">
-<h3 class="font-bold mb-3">Networking</h3>
+<div class="glass p-6 rounded-2xl border border-slate-700">
+<h3 class="font-bold">Networking</h3>
 <p>TCP/IP, DNS, DHCP, VPN, LAN/WAN</p>
 </div>
 
-<div class="p-6 glass rounded-2xl border border-slate-700">
-<h3 class="font-bold mb-3">Cloud & Tools</h3>
-<p>Microsoft 365, Teams, SharePoint</p>
+<div class="glass p-6 rounded-2xl border border-slate-700">
+<h3 class="font-bold">Systems</h3>
+<p>Windows Server, Linux</p>
 </div>
 
-<div class="p-6 glass rounded-2xl border border-slate-700">
-<h3 class="font-bold mb-3">Version Control</h3>
-<p>Git, GitHub</p>
+<div class="glass p-6 rounded-2xl border border-slate-700">
+<h3 class="font-bold">Tools</h3>
+<p>Git, GitHub, Microsoft 365</p>
 </div>
 
 </div>
-</section>
-
-<!-- NETWORKING -->
-<section class="max-w-7xl mx-auto px-6 py-10">
-
-<h2 class="text-3xl font-extrabold mb-6">Networking Expertise</h2>
-
-<div class="glass p-6 rounded-2xl border border-slate-700 space-y-2">
-<p>✔ LAN/WAN Configuration & Troubleshooting</p>
-<p>✔ TCP/IP, DNS, DHCP Management</p>
-<p>✔ VPN & Remote Access Setup</p>
-<p>✔ Router & Switch Configuration</p>
-<p>✔ Network Monitoring & Optimization</p>
-</div>
-
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="max-w-7xl mx-auto px-6 py-20">
+<section class="max-w-7xl mx-auto px-6 py-20">
 
-<h2 class="text-3xl font-extrabold mb-10">Project Experience</h2>
+<h2 class="text-3xl font-extrabold mb-10">Projects</h2>
 
 <div class="grid md:grid-cols-2 gap-6">
 
 <a href="https://github.com/Moswettta" target="_blank"
-class="p-6 glass rounded-2xl border border-slate-700 hover:scale-105 transition">
+class="glass p-6 rounded-2xl border border-slate-700 hover:scale-105 transition">
 <h3 class="text-indigo-400 font-bold">Smart Parking System</h3>
-<p class="text-sm text-slate-400 mt-2">PHP + MySQL with role-based access control.</p>
+<p class="text-sm text-slate-400">PHP + MySQL system with automation.</p>
 </a>
 
 <a href="https://github.com/Moswettta" target="_blank"
-class="p-6 glass rounded-2xl border border-slate-700 hover:scale-105 transition">
+class="glass p-6 rounded-2xl border border-slate-700 hover:scale-105 transition">
 <h3 class="text-indigo-400 font-bold">Garage Management System</h3>
-<p class="text-sm text-slate-400 mt-2">Vehicle service & billing system.</p>
+<p class="text-sm text-slate-400">Vehicle service tracking system.</p>
 </a>
 
 <a href="https://github.com/Moswettta" target="_blank"
-class="p-6 glass rounded-2xl border border-slate-700 hover:scale-105 transition">
+class="glass p-6 rounded-2xl border border-slate-700 hover:scale-105 transition">
 <h3 class="text-indigo-400 font-bold">Python Automation Tools</h3>
-<p class="text-sm text-slate-400 mt-2">System automation scripts.</p>
+<p class="text-sm text-slate-400">System automation scripts.</p>
 </a>
 
 <a href="https://github.com/Moswettta" target="_blank"
-class="p-6 glass rounded-2xl border border-slate-700 hover:scale-105 transition">
-<h3 class="text-indigo-400 font-bold">Personal Finance Tracker</h3>
-<p class="text-sm text-slate-400 mt-2">Income & expense management system.</p>
+class="glass p-6 rounded-2xl border border-slate-700 hover:scale-105 transition">
+<h3 class="text-indigo-400 font-bold">Finance Tracker</h3>
+<p class="text-sm text-slate-400">Income & expense system.</p>
 </a>
 
 </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="max-w-7xl mx-auto px-6 py-20 text-center">
+<section class="max-w-7xl mx-auto px-6 py-20 text-center">
 
 <h2 class="text-3xl font-extrabold mb-6">Contact</h2>
 
@@ -201,18 +168,53 @@ class="p-6 glass rounded-2xl border border-slate-700 hover:scale-105 transition"
 <p>✉️ benjaminmosweta@gmail.com</p>
 <p>📍 Nairobi, Kenya</p>
 
-<a href="CV.pdf" download
-class="inline-block mt-6 px-6 py-3 bg-indigo-600 rounded-xl text-white hover:bg-indigo-700">
-Download CV
-</a>
-
 </div>
+</section>
+
+<!-- CV CONTENT (HIDDEN) -->
+<section id="cv-content" class="hidden bg-white text-black p-10">
+
+<h1>Benjamin Mosweta</h1>
+<p>Full Stack Developer | IT Support | Network Administrator</p>
+
+<h2>Skills</h2>
+<ul>
+<li>PHP, MySQL, JavaScript</li>
+<li>Python Automation</li>
+<li>Networking (TCP/IP, DNS, DHCP)</li>
+<li>Windows Server & Linux</li>
+<li>Git & GitHub</li>
+</ul>
+
+<h2>Projects</h2>
+<ul>
+<li>Smart Parking System</li>
+<li>Garage Management System</li>
+<li>Python Automation Tools</li>
+<li>Finance Tracker</li>
+</ul>
+
+<h2>Contact</h2>
+<p>Email: benjaminmosweta@gmail.com</p>
+<p>Phone: +254 798 458 270</p>
 
 </section>
 
 <!-- SCRIPT -->
 <script>
 document.documentElement.classList.add('dark');
+
+function downloadCV() {
+    const element = document.getElementById("cv-content");
+
+    html2pdf().set({
+        margin: 0.5,
+        filename: 'Benjamin_Mosweta_CV.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+    }).from(element).save();
+}
 </script>
 
 </body>
