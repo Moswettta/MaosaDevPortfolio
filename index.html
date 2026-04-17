@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benjamin Mosweta | Software Engineer</title>
+    <title>Benjamin Mosweta | Portfolio</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <script>
@@ -14,151 +14,234 @@
             darkMode: 'class',
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Space Grotesk', 'sans-serif'] },
-                    colors: {
-                        brand: '#6366f1',
-                    }
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
                 }
             }
         }
     </script>
 
     <style>
-        body { background-color: #020617; color: #f8fafc; }
-        .glow-card {
+        body { background-color: #020617; color: #f1f5f9; }
+        .glass-panel {
             background: rgba(30, 41, 59, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
+            backdrop-filter: blur(12px);
         }
-        .glow-card:hover {
-            border-color: #6366f1;
-            transform: translateY(-5px);
-        }
-        .gradient-text {
-            background: linear-gradient(to right, #818cf8, #c084fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .profile-ring {
+        .gradient-border {
             position: relative;
-            padding: 12px;
+            border-radius: 1.5rem;
+            background: rgba(30, 41, 59, 0.4);
+            padding: 1px;
+        }
+        .gradient-border::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 1.5rem;
+            padding: 2px;
             background: linear-gradient(45deg, #6366f1, #a855f7);
-            border-radius: 50%;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0.3;
         }
     </style>
 </head>
 
 <body class="selection:bg-indigo-500/30">
 
-    <header class="fixed w-full top-0 z-50 backdrop-blur-xl border-b border-white/5 bg-slate-950/20">
+    <header class="fixed w-full top-0 z-50 backdrop-blur-md border-b border-white/5 bg-slate-950/20">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold tracking-tighter uppercase">Ben<span class="text-indigo-500">.</span>Dev</span>
+            <span class="text-xl font-extrabold tracking-tighter uppercase italic">Ben<span class="text-indigo-500">.</span>Dev</span>
             <nav class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest">
                 <a href="#about" class="hover:text-indigo-400 transition">About</a>
-                <a href="#projects" class="hover:text-indigo-400 transition">Portfolio</a>
+                <a href="#skills" class="hover:text-indigo-400 transition">Skills & Tools</a>
+                <a href="#projects" class="hover:text-indigo-400 transition">Experience</a>
                 <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
             </nav>
-            <a href="https://github.com/Moswettta" target="_blank" class="text-xl hover:text-indigo-400 transition">
+            <a href="https://github.com/Moswettta" target="_blank" class="text-2xl hover:text-indigo-400 transition">
                 <i class="fab fa-github"></i>
             </a>
         </div>
     </header>
 
-    <section class="min-h-screen flex items-center justify-center pt-20">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div class="text-left">
-                <h1 class="text-6xl md:text-7xl font-bold mb-6 tracking-tight">
-                    Full-Stack <br><span class="gradient-text">Engineer</span>
+    <section class="min-h-screen flex items-center pt-28 pb-20">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7">
+                <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tight leading-none">
+                    IT Support <br> & <span class="text-indigo-500 italic">Backend</span>
                 </h1>
-                <p class="text-slate-400 text-lg mb-8 leading-relaxed max-w-lg">
-                    Specializing in PHP ecosystems, system automation, and hardware-software integration. Building robust solutions for enterprise management.
+                <p class="text-slate-400 text-lg mb-8 max-w-xl leading-relaxed">
+                    IT specialist and developer with a deep focus on system administration, network infrastructure, and building automated management systems.
                 </p>
+                
+                <div class="flex flex-wrap gap-3 mb-10">
+                    <span class="px-4 py-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 text-xs font-bold uppercase tracking-tighter flex items-center gap-2">
+                        <i class="fas fa-check-circle"></i> IT Support & Troubleshooting
+                    </span>
+                    <span class="px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-xs font-bold uppercase tracking-tighter flex items-center gap-2">
+                        <i class="fas fa-check-circle"></i> Windows & Linux Admin
+                    </span>
+                    <span class="px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-xs font-bold uppercase tracking-tighter flex items-center gap-2">
+                        <i class="fas fa-check-circle"></i> Backend Dev (PHP/MySQL)
+                    </span>
+                    <span class="px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-xs font-bold uppercase tracking-tighter flex items-center gap-2">
+                        <i class="fas fa-check-circle"></i> Backup & Disaster Recovery
+                    </span>
+                </div>
+
                 <div class="flex gap-4">
-                    <a href="#projects" class="px-8 py-4 bg-indigo-600 rounded-xl font-bold hover:bg-indigo-500 transition shadow-lg shadow-indigo-500/20">View Portfolio</a>
-                    <a href="https://github.com/Moswettta" target="_blank" class="px-8 py-4 bg-slate-800 rounded-xl font-bold hover:bg-slate-700 transition">
-                        <i class="fab fa-github mr-2"></i> GitHub
-                    </a>
+                    <a href="#projects" class="px-8 py-4 bg-indigo-600 rounded-xl font-bold hover:bg-indigo-500 transition shadow-xl shadow-indigo-500/20">View Experience</a>
+                    <a href="https://github.com/Moswettta" target="_blank" class="px-8 py-4 border border-slate-700 rounded-xl font-bold hover:bg-slate-800 transition">GitHub Profile</a>
                 </div>
             </div>
-            
-            <div class="flex justify-center relative">
-                <div class="absolute inset-0 bg-indigo-500/20 blur-[100px] rounded-full"></div>
-                <div class="profile-ring shadow-2xl">
+
+            <div class="lg:col-span-5 flex justify-center relative">
+                <div class="absolute inset-0 bg-indigo-500/10 blur-[120px] rounded-full"></div>
+                <div class="relative p-2 bg-gradient-to-tr from-indigo-500 to-purple-500 rounded-3xl rotate-3 hover:rotate-0 transition-transform duration-500">
                     <img src="PROFILE.jpg" alt="Benjamin Mosweta" 
-                         class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-slate-900 shadow-inner">
+                         class="w-80 h-80 md:w-96 md:h-96 rounded-2xl object-cover grayscale hover:grayscale-0 transition-all duration-500">
                 </div>
             </div>
+
         </div>
     </section>
 
-    <section id="projects" class="max-w-7xl mx-auto px-6 py-24 border-t border-white/5">
-        <div class="flex justify-between items-end mb-16">
-            <div>
-                <h2 class="text-4xl font-bold mb-2">Featured Work</h2>
-                <p class="text-slate-400">Deployed systems and architecture.</p>
-            </div>
-        </div>
-
+    <section id="skills" class="max-w-7xl mx-auto px-6 py-24 border-t border-white/5">
+        <h2 class="text-4xl font-bold mb-16 text-center">Technical <span class="text-indigo-500">Infrastructure</span></h2>
+        
         <div class="grid md:grid-cols-3 gap-6">
-            <a href="https://github.com/Moswettta" target="_blank" class="glow-card p-8 rounded-2xl group">
-                <i class="fas fa-parking text-indigo-400 text-3xl mb-6"></i>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-indigo-400 transition">Smart Parking</h3>
-                <p class="text-slate-400 text-sm mb-4">PHP-based automated space allocation and billing system.</p>
-                <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">View Code →</span>
-            </a>
-
-            <a href="https://github.com/Moswettta" target="_blank" class="glow-card p-8 rounded-2xl group">
-                <i class="fas fa-hotel text-indigo-400 text-3xl mb-6"></i>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-indigo-400 transition">Hotel Integrated PMS</h3>
-                <p class="text-slate-400 text-sm mb-4">Enterprise Property Management System for room and service tracking.</p>
-                <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">View Code →</span>
-            </a>
-
-            <a href="https://github.com/Moswettta" target="_blank" class="glow-card p-8 rounded-2xl group">
-                <i class="fas fa-shopping-cart text-indigo-400 text-3xl mb-6"></i>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-indigo-400 transition">Chat-to-Order Ecom</h3>
-                <p class="text-slate-400 text-sm mb-4">Minimalist boutique with direct WhatsApp order fulfillment.</p>
-                <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">View Code →</span>
-            </a>
-        </div>
-    </section>
-
-    <section id="contact" class="max-w-7xl mx-auto px-6 py-32">
-        <div class="glow-card p-12 rounded-[3rem] text-center relative overflow-hidden">
-            <div class="absolute top-0 right-0 p-10 opacity-5 text-9xl">
-                <i class="fas fa-paper-plane"></i>
+            <div class="md:col-span-2 glass-panel p-8 rounded-3xl">
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                    <i class="fas fa-microchip text-indigo-500"></i> Core IT Skills
+                </h3>
+                <div class="grid grid-cols-2 gap-y-4 text-slate-400">
+                    <p class="flex items-center gap-2"><i class="fas fa-chevron-right text-indigo-500 text-[10px]"></i> Helpdesk Operations</p>
+                    <p class="flex items-center gap-2"><i class="fas fa-chevron-right text-indigo-500 text-[10px]"></i> LAN/WAN Setup</p>
+                    <p class="flex items-center gap-2"><i class="fas fa-chevron-right text-indigo-500 text-[10px]"></i> System Monitoring</p>
+                    <p class="flex items-center gap-2"><i class="fas fa-chevron-right text-indigo-500 text-[10px]"></i> Disaster Recovery</p>
+                    <p class="flex items-center gap-2"><i class="fas fa-chevron-right text-indigo-500 text-[10px]"></i> TCP/IP, DNS, DHCP</p>
+                    <p class="flex items-center gap-2"><i class="fas fa-chevron-right text-indigo-500 text-[10px]"></i> Microsoft 365 Admin</p>
+                    <p class="flex items-center gap-2"><i class="fas fa-chevron-right text-indigo-500 text-[10px]"></i> Software Installation</p>
+                    <p class="flex items-center gap-2"><i class="fas fa-chevron-right text-indigo-500 text-[10px]"></i> Virtualization (VMware)</p>
+                </div>
             </div>
-            
-            <h2 class="text-4xl font-bold mb-4">Start a Conversation</h2>
-            <p class="text-slate-400 mb-12 max-w-xl mx-auto">Currently accepting new projects and consulting opportunities in web development and IT infrastructure.</p>
 
-            <div class="grid md:grid-cols-4 gap-8">
-                <a href="mailto:benjaminmosweta@gmail.com" class="p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition">
-                    <i class="fas fa-envelope text-indigo-400 mb-4 text-xl"></i>
-                    <p class="text-sm font-bold">Email</p>
-                    <p class="text-xs text-slate-400 mt-1">benjaminmosweta@gmail.com</p>
-                </a>
-                <a href="tel:+254798458270" class="p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition">
-                    <i class="fas fa-phone text-indigo-400 mb-4 text-xl"></i>
-                    <p class="text-sm font-bold">Phone</p>
-                    <p class="text-xs text-slate-400 mt-1">+254 798 458 270</p>
-                </a>
-                <a href="https://github.com/Moswettta" target="_blank" class="p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition">
-                    <i class="fab fa-github text-indigo-400 mb-4 text-xl"></i>
-                    <p class="text-sm font-bold">GitHub</p>
-                    <p class="text-xs text-slate-400 mt-1">github.com/Moswettta</p>
-                </a>
-                <div class="p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition">
-                    <i class="fas fa-location-dot text-indigo-400 mb-4 text-xl"></i>
-                    <p class="text-sm font-bold">Location</p>
-                    <p class="text-xs text-slate-400 mt-1">Nairobi, Kenya</p>
+            <div class="glass-panel p-8 rounded-3xl">
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                    <i class="fas fa-tools text-indigo-500"></i> Toolset
+                </h3>
+                <div class="space-y-4 text-sm font-semibold">
+                    <div class="flex justify-between border-b border-white/5 pb-2">
+                        <span class="text-slate-500 uppercase tracking-tighter">Systems</span>
+                        <span>Windows, Linux</span>
+                    </div>
+                    <div class="flex justify-between border-b border-white/5 pb-2">
+                        <span class="text-slate-500 uppercase tracking-tighter">Networking</span>
+                        <span>DHCP, DNS, VPN</span>
+                    </div>
+                    <div class="flex justify-between border-b border-white/5 pb-2">
+                        <span class="text-slate-500 uppercase tracking-tighter">Virtual</span>
+                        <span>VMware, VBox</span>
+                    </div>
+                    <div class="flex justify-between border-b border-white/5 pb-2">
+                        <span class="text-slate-500 uppercase tracking-tighter">Web</span>
+                        <span>PHP, MySQL, JS</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-10 text-center text-slate-600 text-xs font-bold uppercase tracking-[0.2em]">
-        Handcrafted by Benjamin Mosweta &copy; 2026
+    <section id="projects" class="max-w-7xl mx-auto px-6 py-24">
+        <div class="mb-16">
+            <h2 class="text-4xl font-bold mb-4">Project Experience</h2>
+            <p class="text-slate-500 uppercase tracking-widest text-xs font-bold italic">PHP / MySQL / Full-Stack Implementation</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <div class="gradient-border p-8 group">
+                <div class="flex justify-between items-start mb-6">
+                    <i class="fas fa-parking text-4xl text-indigo-400 opacity-50"></i>
+                    <a href="https://github.com/Moswettta" target="_blank" class="p-3 bg-white/5 rounded-full hover:bg-indigo-500 transition"><i class="fab fa-github"></i></a>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">Smart Parking System</h3>
+                <ul class="text-slate-400 text-sm space-y-2 mb-6">
+                    <li>• Web-based management using PHP & MySQL</li>
+                    <li>• Implemented role-based access & parking allocation</li>
+                    <li>• Reduced congestion through structured management</li>
+                </ul>
+            </div>
+
+            <div class="gradient-border p-8 group">
+                <div class="flex justify-between items-start mb-6">
+                    <i class="fas fa-wrench text-4xl text-indigo-400 opacity-50"></i>
+                    <a href="https://github.com/Moswettta" target="_blank" class="p-3 bg-white/5 rounded-full hover:bg-indigo-500 transition"><i class="fab fa-github"></i></a>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">Garage Management Platform</h3>
+                <ul class="text-slate-400 text-sm space-y-2 mb-6">
+                    <li>• Multi-user vehicle service & operations tracking</li>
+                    <li>• Improved service tracking for mechanics/admins</li>
+                    <li>• Streamlined internal workflow efficiency</li>
+                </ul>
+            </div>
+
+            <div class="gradient-border p-8 group">
+                <div class="flex justify-between items-start mb-6">
+                    <i class="fas fa-calendar-check text-4xl text-indigo-400 opacity-50"></i>
+                    <a href="https://github.com/Moswettta" target="_blank" class="p-3 bg-white/5 rounded-full hover:bg-indigo-500 transition"><i class="fab fa-github"></i></a>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">Salon Management System</h3>
+                <p class="text-slate-400 text-sm mb-4">Designed a scheduling system to eliminate conflicts and improve customer service coordination.</p>
+            </div>
+
+            <div class="gradient-border p-8 group">
+                <div class="flex justify-between items-start mb-6">
+                    <i class="fas fa-chart-line text-4xl text-indigo-400 opacity-50"></i>
+                    <a href="https://github.com/Moswettta" target="_blank" class="p-3 bg-white/5 rounded-full hover:bg-indigo-500 transition"><i class="fab fa-github"></i></a>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">Personal Finance Tracker</h3>
+                <p class="text-slate-400 text-sm mb-4">Enhanced financial visibility through tracking income/expenses and custom reporting modules.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="max-w-7xl mx-auto px-6 py-32 border-t border-white/5">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-black mb-4 uppercase">Start a Conversation</h2>
+            <div class="h-1 w-20 bg-indigo-500 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6">
+            <a href="mailto:benjaminmosweta@gmail.com" class="glass-panel p-8 rounded-3xl text-center hover:border-indigo-500/50 transition group">
+                <i class="fas fa-envelope text-2xl mb-4 text-indigo-500 group-hover:scale-110 transition"></i>
+                <p class="text-xs uppercase font-black text-slate-500 mb-1 tracking-widest">Email</p>
+                <p class="text-[10px] break-all">benjaminmosweta@gmail.com</p>
+            </a>
+            <a href="tel:+254798458270" class="glass-panel p-8 rounded-3xl text-center hover:border-indigo-500/50 transition group">
+                <i class="fas fa-phone text-2xl mb-4 text-indigo-500 group-hover:scale-110 transition"></i>
+                <p class="text-xs uppercase font-black text-slate-500 mb-1 tracking-widest">Phone</p>
+                <p class="text-[10px]">+254 798 458 270</p>
+            </a>
+            <a href="https://github.com/Moswettta" target="_blank" class="glass-panel p-8 rounded-3xl text-center hover:border-indigo-500/50 transition group">
+                <i class="fab fa-github text-2xl mb-4 text-indigo-500 group-hover:scale-110 transition"></i>
+                <p class="text-xs uppercase font-black text-slate-500 mb-1 tracking-widest">GitHub</p>
+                <p class="text-[10px]">github.com/Moswettta</p>
+            </a>
+            <div class="glass-panel p-8 rounded-3xl text-center hover:border-indigo-500/50 transition group">
+                <i class="fas fa-map-marker-alt text-2xl mb-4 text-indigo-500 group-hover:scale-110 transition"></i>
+                <p class="text-xs uppercase font-black text-slate-500 mb-1 tracking-widest">Location</p>
+                <p class="text-[10px]">Nairobi, Kenya</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-slate-600 text-xs font-bold uppercase tracking-[0.3em]">
+        Benjamin Mosweta &copy; 2026 / Nairobi, KE
     </footer>
 
 </body>
