@@ -3,42 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Benjamin Mosweta | Web Developer & IT Support</title>
+<title>Benjamin Mosweta | Portfolio</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<style>
-body {
-    font-family: 'Inter', sans-serif;
-    background: #f1f5f9;
-    color: #1e293b;
-}
-.section-title {
-    font-size: 2rem;
-    font-weight: 800;
-}
-.card {
-    transition: all 0.3s ease;
-}
-.card:hover {
-    transform: translateY(-5px);
-}
-</style>
 </head>
 
-<body>
+<body class="bg-slate-50 text-slate-800 font-[Inter]">
 
-<!-- HEADER -->
-<header class="bg-white/80 backdrop-blur shadow-sm sticky top-0 z-50">
+<!-- NAV -->
+<header class="sticky top-0 z-50 bg-white/70 backdrop-blur border-b border-slate-200">
 <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 class="text-2xl font-extrabold text-indigo-700 tracking-tight">
-        Benjamin<span class="text-gray-800">.</span>
+
+    <h1 class="text-xl md:text-2xl font-extrabold text-indigo-600">
+        Benjamin<span class="text-slate-900">.Dev</span>
     </h1>
 
-    <nav class="hidden md:flex space-x-8 font-medium text-sm">
+    <nav class="hidden md:flex gap-8 font-medium text-sm">
         <a href="#home" class="hover:text-indigo-600">Home</a>
         <a href="#about" class="hover:text-indigo-600">About</a>
         <a href="#skills" class="hover:text-indigo-600">Skills</a>
@@ -46,107 +30,103 @@ body {
         <a href="#contact" class="hover:text-indigo-600">Contact</a>
     </nav>
 
-    <button id="menuBtn" class="md:hidden text-xl">
-        <i class="fas fa-bars"></i>
-    </button>
-</div>
-
-<div id="mobileMenu" class="hidden md:hidden bg-white px-6 pb-4">
-    <a href="#home" class="block py-2">Home</a>
-    <a href="#about" class="block py-2">About</a>
-    <a href="#skills" class="block py-2">Skills</a>
-    <a href="#projects" class="block py-2">Projects</a>
-    <a href="#contact" class="block py-2">Contact</a>
 </div>
 </header>
 
-<main class="max-w-7xl mx-auto px-6 py-10">
-
 <!-- HERO -->
-<section id="home" class="grid md:grid-cols-2 gap-10 items-center mb-20">
+<section id="home" class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 items-center gap-12">
 
 <div>
-    <p class="text-indigo-600 font-semibold mb-2">Web Developer & IT Support</p>
+    <p class="text-indigo-600 font-semibold mb-3">Web Developer • IT Support • Systems Builder</p>
 
-    <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
-        Building Practical Systems That Solve Real Problems
+    <h2 class="text-4xl md:text-6xl font-extrabold leading-tight">
+        I Build <span class="text-indigo-600">Smart Systems</span> for Real-World Problems
     </h2>
 
-    <p class="text-gray-600 text-lg mb-6">
-        I specialize in developing web-based systems for businesses and providing reliable IT support.
-        With 4+ years of experience, I focus on performance, usability, and real-world functionality.
+    <p class="mt-6 text-slate-600 text-lg leading-relaxed">
+        Full-stack developer with 4+ years experience building management systems,
+        automation tools, and IT infrastructure solutions for businesses and institutions.
     </p>
 
-    <div class="flex gap-4">
-        <a href="#projects" class="bg-indigo-600 text-white px-6 py-3 rounded-full shadow hover:bg-indigo-700">
+    <div class="mt-8 flex gap-4">
+        <a href="#projects"
+           class="px-6 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow-lg hover:bg-indigo-700 transition">
             View Projects
         </a>
-        <a href="#contact" class="border px-6 py-3 rounded-full hover:bg-gray-100">
+
+        <a href="#contact"
+           class="px-6 py-3 rounded-xl border border-slate-300 hover:bg-slate-100 transition">
             Contact Me
         </a>
     </div>
 </div>
 
 <div class="flex justify-center">
-    <img src="PROFILE.jpg"
-         class="w-72 h-72 object-cover rounded-full shadow-xl border-4 border-white">
+    <div class="relative">
+        <div class="absolute inset-0 bg-indigo-500 blur-3xl opacity-20 rounded-full"></div>
+        <img src="PROFILE.jpg"
+             class="relative w-72 h-72 md:w-96 md:h-96 object-cover rounded-full border-8 border-white shadow-2xl">
+    </div>
 </div>
 
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="mb-20">
-<h2 class="section-title mb-6">About Me</h2>
+<section id="about" class="max-w-7xl mx-auto px-6 py-20">
+<h2 class="text-3xl font-extrabold mb-10">About Me</h2>
 
-<div class="bg-white p-8 rounded-2xl shadow">
-<p class="mb-4 text-gray-600">
-I am a <strong>full-stack web developer and IT support specialist</strong> with over four years of experience
-delivering systems for schools, businesses, and service providers.
+<div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 leading-relaxed text-slate-600">
+
+<p class="mb-4">
+I am a <span class="font-semibold text-slate-900">web developer and IT support specialist</span>
+focused on building efficient, scalable, and practical systems.
 </p>
 
-<p class="mb-4 text-gray-600">
-I design and build systems that automate operations like <strong>record management, billing, scheduling, and reporting</strong>
-using PHP, MySQL, and modern web technologies.
+<p class="mb-4">
+I design and develop systems for schools, garages, salons, and businesses using
+PHP, MySQL, JavaScript, HTML, and CSS.
 </p>
 
-<p class="text-gray-600">
-Beyond development, I provide <strong>technical support, networking setup, and system maintenance</strong>,
-ensuring reliability, security, and efficiency in daily operations.
+<p>
+My expertise also includes IT support, networking, troubleshooting,
+system maintenance, and cybersecurity best practices.
 </p>
+
 </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="mb-20">
-<h2 class="section-title mb-6">Skills</h2>
+<section id="skills" class="max-w-7xl mx-auto px-6 py-20">
+<h2 class="text-3xl font-extrabold mb-10">Skills</h2>
 
 <div class="grid md:grid-cols-3 gap-6">
 
-<div class="card bg-white p-6 rounded-2xl shadow">
-<h3 class="font-bold mb-3">Development</h3>
-<div class="flex flex-wrap gap-2 text-sm">
-<span class="bg-indigo-100 px-3 py-1 rounded-full">PHP</span>
-<span class="bg-indigo-100 px-3 py-1 rounded-full">MySQL</span>
-<span class="bg-indigo-100 px-3 py-1 rounded-full">JavaScript</span>
-<span class="bg-indigo-100 px-3 py-1 rounded-full">HTML/CSS</span>
+<!-- card -->
+<div class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition border border-slate-100">
+<h3 class="font-bold mb-4">Development</h3>
+<div class="flex flex-wrap gap-2">
+<span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm">PHP</span>
+<span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm">MySQL</span>
+<span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm">JavaScript</span>
+<span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm">HTML/CSS</span>
 </div>
 </div>
 
-<div class="card bg-white p-6 rounded-2xl shadow">
-<h3 class="font-bold mb-3">IT Support</h3>
-<div class="flex flex-wrap gap-2 text-sm">
-<span class="bg-green-100 px-3 py-1 rounded-full">Troubleshooting</span>
-<span class="bg-green-100 px-3 py-1 rounded-full">Windows/Linux</span>
-<span class="bg-green-100 px-3 py-1 rounded-full">Networking</span>
+<div class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition border border-slate-100">
+<h3 class="font-bold mb-4">IT Support</h3>
+<div class="flex flex-wrap gap-2">
+<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Troubleshooting</span>
+<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Networking</span>
+<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Windows/Linux</span>
 </div>
 </div>
 
-<div class="card bg-white p-6 rounded-2xl shadow">
-<h3 class="font-bold mb-3">Security</h3>
-<div class="flex flex-wrap gap-2 text-sm">
-<span class="bg-red-100 px-3 py-1 rounded-full">Access Control</span>
-<span class="bg-red-100 px-3 py-1 rounded-full">Backups</span>
-<span class="bg-red-100 px-3 py-1 rounded-full">System Updates</span>
+<div class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition border border-slate-100">
+<h3 class="font-bold mb-4">Security</h3>
+<div class="flex flex-wrap gap-2">
+<span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">Backups</span>
+<span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">Access Control</span>
+<span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">Updates</span>
 </div>
 </div>
 
@@ -154,51 +134,49 @@ ensuring reliability, security, and efficiency in daily operations.
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="mb-20">
-<h2 class="section-title mb-6">Projects</h2>
+<section id="projects" class="max-w-7xl mx-auto px-6 py-20">
+<h2 class="text-3xl font-extrabold mb-10">Projects</h2>
 
 <div class="grid md:grid-cols-3 gap-6">
 
-<div class="card bg-white p-6 rounded-2xl shadow">
-<h3 class="font-bold mb-2">School Management System</h3>
-<p class="text-sm text-gray-600">Full system for managing students, fees, exams, and reports.</p>
+<div class="bg-white p-6 rounded-2xl shadow hover:shadow-2xl transition border border-slate-100">
+<i class="fas fa-school text-indigo-600 text-2xl mb-3"></i>
+<h3 class="font-bold">School System</h3>
+<p class="text-sm text-slate-600 mt-2">Students, exams, fees & reporting system.</p>
 </div>
 
-<div class="card bg-white p-6 rounded-2xl shadow">
-<h3 class="font-bold mb-2">Garage Management System</h3>
-<p class="text-sm text-gray-600">Tracks services, vehicles, and billing operations.</p>
+<div class="bg-white p-6 rounded-2xl shadow hover:shadow-2xl transition border border-slate-100">
+<i class="fas fa-car text-green-600 text-2xl mb-3"></i>
+<h3 class="font-bold">Garage System</h3>
+<p class="text-sm text-slate-600 mt-2">Vehicle service & billing management.</p>
 </div>
 
-<div class="card bg-white p-6 rounded-2xl shadow">
-<h3 class="font-bold mb-2">Salon System</h3>
-<p class="text-sm text-gray-600">Appointment booking and staff management.</p>
+<div class="bg-white p-6 rounded-2xl shadow hover:shadow-2xl transition border border-slate-100">
+<i class="fas fa-scissors text-pink-600 text-2xl mb-3"></i>
+<h3 class="font-bold">Salon System</h3>
+<p class="text-sm text-slate-600 mt-2">Appointments & staff scheduling system.</p>
 </div>
 
 </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-<h2 class="section-title mb-6 text-center">Contact</h2>
+<section id="contact" class="max-w-7xl mx-auto px-6 py-20">
+<h2 class="text-3xl font-extrabold mb-10 text-center">Contact Me</h2>
 
-<div class="bg-white p-8 rounded-2xl shadow text-center">
+<div class="bg-white p-8 rounded-2xl shadow-lg text-center border border-slate-100">
+
 <p class="mb-2">📞 +254 798 458 270</p>
 <p class="mb-2">✉️ benjaminmosweta@gmail.com</p>
 <p class="mb-4">📍 Nairobi, Kenya</p>
 
-<a href="https://github.com/Moswettta" class="text-indigo-600 underline">
-GitHub Profile
+<a href="https://github.com/Moswettta"
+   class="text-indigo-600 font-semibold hover:underline">
+GitHub Profile →
 </a>
+
 </div>
 </section>
-
-</main>
-
-<script>
-document.getElementById("menuBtn").onclick = () => {
-    document.getElementById("mobileMenu").classList.toggle("hidden");
-};
-</script>
 
 </body>
 </html>
