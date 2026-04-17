@@ -20,7 +20,7 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-/* ===== TOP GLASS SYSTEM ===== */
+/* GLASS EFFECT */
 .glass {
   backdrop-filter: blur(14px);
   background: rgba(255,255,255,0.06);
@@ -31,14 +31,14 @@ body {
   background: rgba(0,0,0,0.45);
 }
 
-/* Smooth print fix */
+/* PRINT FIX */
 @media print {
+  .no-print {
+    display: none !important;
+  }
   body {
     background: white !important;
     color: black !important;
-  }
-  .no-print {
-    display: none !important;
   }
 }
 </style>
@@ -64,19 +64,16 @@ Benjamin<span class="text-white">.Dev</span>
 
 <div class="flex gap-3">
 
-<!-- DOWNLOAD CV -->
 <a href="CV.pdf" download
 class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm">
 📄 Download CV
 </a>
 
-<!-- PRINT CV -->
 <button onclick="window.print()"
 class="px-4 py-2 rounded-xl bg-green-600 hover:bg-green-700 text-white text-sm">
 🖨 Print CV
 </button>
 
-<!-- DARK MODE -->
 <button onclick="document.documentElement.classList.toggle('dark')"
 class="px-3 py-2 rounded-xl bg-slate-200 dark:bg-slate-800">
 🌙
@@ -87,19 +84,23 @@ class="px-3 py-2 rounded-xl bg-slate-200 dark:bg-slate-800">
 </div>
 </header>
 
-<!-- HERO -->
+<!-- HERO WITH IMAGE -->
 <section class="max-w-7xl mx-auto px-6 py-20 text-center">
+
+<img src="profile.jpg"
+class="w-40 h-40 mx-auto rounded-full border-4 border-indigo-500 shadow-lg mb-6 object-cover no-print"
+alt="Profile Image">
 
 <h1 class="text-5xl md:text-6xl font-extrabold">
 Benjamin Maosa Mosweta
 </h1>
 
 <p class="text-indigo-400 mt-3 font-semibold">
-ICT Support Specialist • IT Support • PHP Developer
+ICT Support Specialist • IT Support • PHP Web Developer
 </p>
 
 <p class="text-slate-400 mt-6 max-w-3xl mx-auto">
-Full-stack developer and ICT support specialist experienced in systems administration, networking, and PHP/MySQL web applications for automation and business systems.
+Full-stack developer and ICT support specialist experienced in systems administration, networking, and PHP/MySQL development for automation systems.
 </p>
 
 </section>
@@ -109,9 +110,8 @@ Full-stack developer and ICT support specialist experienced in systems administr
 <div class="glass p-8 rounded-2xl">
 <h2 class="text-3xl font-bold mb-4">Professional Summary</h2>
 <p>
-ICT Support Specialist with hands-on experience in IT support, systems administration, and network troubleshooting gained through enterprise environments.
-Skilled in Windows/Linux systems, LAN/WAN infrastructure, and end-user support.
-Also experienced in PHP & MySQL system development for automation and business solutions.
+ICT Support Specialist with experience in IT support, systems administration, and network troubleshooting in enterprise environments.
+Skilled in Windows/Linux systems, LAN/WAN infrastructure, and PHP/MySQL development for business automation systems.
 </p>
 </div>
 </section>
@@ -123,35 +123,12 @@ Also experienced in PHP & MySQL system development for automation and business s
 
 <div class="grid md:grid-cols-3 gap-6">
 
-<div class="glass p-6 rounded-xl">
-<h3 class="font-bold">IT Support</h3>
-<p>Helpdesk, troubleshooting, hardware & software support</p>
-</div>
-
-<div class="glass p-6 rounded-xl">
-<h3 class="font-bold">Networking</h3>
-<p>TCP/IP, DNS, DHCP, VPN, LAN/WAN setup</p>
-</div>
-
-<div class="glass p-6 rounded-xl">
-<h3 class="font-bold">Systems</h3>
-<p>Windows Server, Linux, virtualization</p>
-</div>
-
-<div class="glass p-6 rounded-xl">
-<h3 class="font-bold">Web Dev</h3>
-<p>PHP, MySQL, HTML, JavaScript</p>
-</div>
-
-<div class="glass p-6 rounded-xl">
-<h3 class="font-bold">Cloud</h3>
-<p>Microsoft 365, SharePoint, OneDrive</p>
-</div>
-
-<div class="glass p-6 rounded-xl">
-<h3 class="font-bold">Tools</h3>
-<p>Git, GitHub, VMware, VirtualBox</p>
-</div>
+<div class="glass p-6 rounded-xl">IT Support & Helpdesk</div>
+<div class="glass p-6 rounded-xl">Windows & Linux Systems</div>
+<div class="glass p-6 rounded-xl">Networking (TCP/IP, DNS, DHCP)</div>
+<div class="glass p-6 rounded-xl">PHP & MySQL Development</div>
+<div class="glass p-6 rounded-xl">Microsoft 365</div>
+<div class="glass p-6 rounded-xl">Git & GitHub</div>
 
 </div>
 </section>
@@ -164,85 +141,64 @@ Also experienced in PHP & MySQL system development for automation and business s
 <div class="grid md:grid-cols-2 gap-6">
 
 <div class="glass p-6 rounded-xl">
-<h3 class="font-bold text-indigo-400">Smart Parking System</h3>
-<p>PHP & MySQL system with role-based access control and automation.</p>
+<h3 class="text-indigo-400 font-bold">Smart Parking System</h3>
+<p>PHP & MySQL system with role-based access control.</p>
 </div>
 
 <div class="glass p-6 rounded-xl">
-<h3 class="font-bold text-indigo-400">Garage Management System</h3>
-<p>Vehicle service tracking and billing automation system.</p>
+<h3 class="text-indigo-400 font-bold">Garage Management System</h3>
+<p>Vehicle service tracking and billing automation.</p>
 </div>
 
 <div class="glass p-6 rounded-xl">
-<h3 class="font-bold text-indigo-400">Salon Booking System</h3>
-<p>Appointment scheduling system reducing conflicts.</p>
+<h3 class="text-indigo-400 font-bold">Salon Booking System</h3>
+<p>Online appointment scheduling system.</p>
 </div>
 
 <div class="glass p-6 rounded-xl">
-<h3 class="font-bold text-indigo-400">Finance Tracker</h3>
-<p>Income & expense tracking system with reports.</p>
+<h3 class="text-indigo-400 font-bold">Finance Tracker</h3>
+<p>Income & expense tracking system.</p>
 </div>
 
 </div>
 </section>
 
-<!-- CV SECTION (PRINT FRIENDLY) -->
+<!-- CV SECTION -->
 <section id="cv" class="max-w-7xl mx-auto px-6 py-16">
 
 <h2 class="text-3xl font-bold mb-6">Curriculum Vitae</h2>
 
 <div class="glass p-10 rounded-2xl space-y-6">
 
-<!-- CONTACT -->
-<div>
-<h3 class="font-bold text-xl">Contact Information</h3>
+<h3 class="font-bold text-xl">Contact</h3>
 <p>📞 +254 798 458 270</p>
 <p>✉️ benjaminmosweta@gmail.com</p>
-<p>📍 Nairobi, Kenya</p>
 <p>LinkedIn: www.linkedin.com/in/benjamin-maosa-86b27019b</p>
 <p>Portfolio: https://moswettta.github.io/MaosaDevPortfolio/</p>
-</div>
 
-<!-- EXPERIENCE -->
-<div>
-<h3 class="font-bold text-xl">Experience</h3>
-<p><b>IT Support Intern – National Housing Corporation (2025)</b></p>
-<ul class="list-disc ml-6">
-<li>Provided IT support to 50+ users</li>
-<li>Network troubleshooting & maintenance</li>
-<li>System installation & configuration</li>
-</ul>
+<hr class="opacity-20">
 
-<br>
+<h3 class="font-bold text-xl">Professional Experience</h3>
 
-<p><b>IT Support Intern – National Housing Corporation (2022)</b></p>
-<ul class="list-disc ml-6">
-<li>Supported 100+ users</li>
-<li>LAN/WAN troubleshooting</li>
-</ul>
+<p><b>IT Support Intern – National Housing Corporation</b></p>
+<p>Provided IT support, networking, system maintenance, and troubleshooting.</p>
 
 <br>
 
 <p><b>IT & Marketing Intern – APRT SACCO</b></p>
-<ul class="list-disc ml-6">
-<li>Cloud backup implementation</li>
-<li>User training & support</li>
-</ul>
-</div>
+<p>Cloud backup, staff training, IT support operations.</p>
 
-<!-- EDUCATION -->
-<div>
+<hr class="opacity-20">
+
 <h3 class="font-bold text-xl">Education</h3>
 <p>BBIT – Mount Kenya University (2023–2025)</p>
 <p>Diploma – Mount Kenya University (2021–2022)</p>
 <p>Certificate – Mount Kenya University (2018–2019)</p>
-</div>
 
-<!-- SKILLS -->
-<div>
-<h3 class="font-bold text-xl">Technical Skills</h3>
-<p>PHP, MySQL, JavaScript, Windows Server, Linux, Networking, Git</p>
-</div>
+<hr class="opacity-20">
+
+<h3 class="font-bold text-xl">Technologies</h3>
+<p>PHP, MySQL, JavaScript, Linux, Windows Server, Networking, Git</p>
 
 </div>
 </section>
@@ -253,6 +209,7 @@ Also experienced in PHP & MySQL system development for automation and business s
 <h2 class="text-3xl font-bold mb-6">Contact</h2>
 
 <div class="glass p-8 rounded-2xl">
+
 <p>📞 +254 798 458 270</p>
 <p>✉️ benjaminmosweta@gmail.com</p>
 
@@ -266,7 +223,7 @@ Download CV
 
 <!-- FOOTER -->
 <footer class="text-center py-10 text-sm text-slate-500 no-print">
-© 2026 Benjamin Maosa | Portfolio
+© 2026 Benjamin Maosa
 </footer>
 
 <script>
